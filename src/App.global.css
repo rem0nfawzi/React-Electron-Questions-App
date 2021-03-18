@@ -2,6 +2,11 @@
  * @NOTE: Prepend a `~` to css file paths that are in your node_modules
  *        See https://github.com/webpack-contrib/sass-loader#imports
  */
+@font-face {
+  font-family: Almarai;
+  src: url('./assets/fonts/Almarai-Bold.ttf');
+}
+
 body {
   position: relative;
   color: white;
@@ -11,7 +16,7 @@ body {
   overflow-y: hidden;
 }
 * {
-  font-family: Cairo;
+  font-family: Almarai;
   color: #093840;
 }
 .action-btn {
@@ -24,6 +29,10 @@ body {
   outline: 0;
   border: 0;
   cursor: pointer;
+}
+.action-btn.disable {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 .welcome {
   position: absolute;
@@ -65,7 +74,7 @@ body {
 .questions .question .answers li {
   font-size: 25px;
   cursor: pointer;
-  padding: 10px 20px;
+  padding: 15px 20px;
   max-width: 400px;
   border-radius: 50px;
   margin-bottom: 5px;
@@ -78,18 +87,38 @@ body {
 .questions .question .answers li.right {
   color: #fff;
   background-color: #47da6e;
+  animation: shake 0.3s ease-in-out;
 }
 
 .questions .question .answers li.wrong {
   color: #fff;
   background-color: #e04f4f;
+  animation: shake 0.3s ease-in-out;
 }
 
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-2deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(2deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 h1.bravo {
   color: #ff8557;
   font-size: 100px;
   text-align: center;
   margin-top: 0;
+  animation: shake 0.3s infinite ease-in-out;
 }
 
 .questions.bravo {

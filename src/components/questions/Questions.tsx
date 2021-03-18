@@ -50,7 +50,19 @@ const Questions = () => {
         <Bravo />
       )}
       {activeQuestion < questions.length && (
-        <button className="action-btn" onClick={handleNext}>
+        <button
+          className={`action-btn ${
+            !answers[activeQuestion] ||
+            answers[activeQuestion] !== questions[activeQuestion].rightAnswer
+              ? 'disable'
+              : ''
+          }`}
+          onClick={handleNext}
+          disabled={
+            !answers[activeQuestion] ||
+            answers[activeQuestion] !== questions[activeQuestion].rightAnswer
+          }
+        >
           التالي
         </button>
       )}

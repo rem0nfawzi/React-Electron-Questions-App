@@ -2,7 +2,7 @@
 import React from 'react';
 
 const Bravo = () => {
-  return <h1 className="bravo">برافوو</h1>;
+  return <h1 className="bravo">براڤوو</h1>;
 };
 
 export default Bravo;

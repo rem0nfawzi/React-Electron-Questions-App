@@ -11,7 +11,7 @@ body {
   position: relative;
   color: white;
   height: 100vh;
-  background-color: #cafaff;
+  background-color: #bcf9ff;
   font-family: sans-serif;
   overflow-y: hidden;
 }
@@ -19,6 +19,21 @@ body {
   font-family: Almarai;
   color: #093840;
 }
+body:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-image: url('./assets/bg.jpg');
+  background-position: center;
+  background-size: cover;
+  filter: grayscale(1);
+  opacity: 0.1;
+  z-index: -1;
+}
+
 .action-btn {
   background-color: #2a5890;
   display: inline-block;
@@ -29,6 +44,7 @@ body {
   outline: 0;
   border: 0;
   cursor: pointer;
+  font-size: 20px;
 }
 .action-btn.disable {
   opacity: 0.5;
@@ -47,7 +63,7 @@ body {
 }
 
 .welcome h1 {
-  font-size: 60px;
+  font-size: 65px;
 }
 
 /* Questions */
@@ -59,9 +75,9 @@ body {
 }
 .questions .question h2 {
   color: #000;
-  font-size: 50px;
+  font-size: 55px;
   margin-top: 0;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 .questions .question .answers {
   display: flex;
@@ -72,12 +88,12 @@ body {
   margin-bottom: 40px;
 }
 .questions .question .answers li {
-  font-size: 25px;
+  font-size: 30px;
   cursor: pointer;
-  padding: 15px 20px;
-  max-width: 400px;
+  padding: 20px 30px;
+  max-width: 600px;
   border-radius: 50px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   transition: all 0.2 ease-in-out;
   display: flex;
   align-items: center;
@@ -114,7 +130,6 @@ body {
   }
 }
 h1.bravo {
-  color: #ff8557;
   font-size: 100px;
   text-align: center;
   margin-top: 0;

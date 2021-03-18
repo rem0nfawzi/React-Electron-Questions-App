@@ -6,7 +6,7 @@ import Questions from './components/questions/Questions';
 const Welcome = () => {
   return (
     <div className="welcome">
-      <h1>اختر الاجابة الصحيحة</h1>
+      <h1>اختر الإجابة الصحيحة</h1>
       <Link to="/questions" className="action-btn">
         السؤال الأول
       </Link>
